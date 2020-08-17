@@ -1,19 +1,19 @@
 #guess the number
 import random
-c = 0
-guesses = 5
+chances = 0
+guesses = 10
 a = random.randint(1,100)
 
  
 while True:
- 	b = int(input('enter the number'))
- 	c += 1
- 	if guesses < c:
- 		print('game over')
+ 	b = int(input('enter the number: '))
+ 	chances += 1
+ 	if guesses < chances:
+ 		print('game over,better luck next time')
  		break
  	elif b == a :
  		print('Congratulations you nailed it')
- 		print(f'you taken {c} attemts')
+ 		print(f'you taken {chances} attemts')
  		break
  	elif a > b :
  		print('your number is too small,kindly try with larger number')
@@ -22,5 +22,3 @@ while True:
  	
  
  		
-#identify the guessed number
-#print the no of iterations
